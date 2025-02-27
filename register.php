@@ -78,11 +78,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="">Password</label>
-                        <input name="password" class="form-control" type="text" placeholder="username">
+                        <input name="password" class="form-control" type="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;">
                     </div>
                     <div class="mb-3">
                         <label for="">Confirm Password</label>
-                        <input name="confirm_password" class="form-control" type="text" placeholder="confirmpassword">
+                        <input name="confirm_password" class="form-control" type="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;">
                     </div>
 
                     <div class="mb-3">

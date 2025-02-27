@@ -1,6 +1,11 @@
 
 <?php
     require_once('db_connect.php');
+    session_start();
+
+    if (!empty($_SESSION['user_id'])) {
+        header("Location: dashboard.php");
+    }
 
     if($_SERVER['REQUEST_METHOD']  == 'POST') {
         $username_email = $_POST['username_email'];
@@ -14,7 +19,7 @@
         $user = mysqli_fetch_assoc($result);
 
         if(!empty($user)) {
-            session_start();
+           
             $_SESSION['user_id'] = $user['id'];
             header("Location: dashboard.php");
         }
@@ -30,12 +35,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        input[type="password"]::placeholder {
+            font-size: 20px !important;
+            letter-spacing: 3px;
+        }
+    </style>
 </head>
+
 <body style="height: 100vh; display: flex; align-items: center; justify-content: center">
     <div class="container">
     <div class="row justify-content-center">
         <div class="col-4">
-            <div class="p-3 shadow">
+            <div class="p-4 shadow">
+                <h3>LOGIN</h3>
 
             <?php
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -51,7 +64,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="">Password</label>
-                        <input name="password" class="form-control" type="text" placeholder="username">
+                        <input name="password" class="form-control" type="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;">
                     </div>
 
                     <div class="my-4">
