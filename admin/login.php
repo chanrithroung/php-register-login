@@ -1,6 +1,6 @@
 
 <?php
-    require_once('db_connect.php');
+    require_once('../utils/db_connect.php');
     session_start();
 
     if (!empty($_SESSION['user_id'])) {
