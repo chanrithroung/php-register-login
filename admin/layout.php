@@ -1,6 +1,6 @@
 <?php 
-    include('../utils/db_connect.php');
-    
+    require_once('function.php');
+    require_once('modal.php');
     session_start();
     if (empty($_SESSION['user_id']) ) {
         header("Location: login.php");
@@ -42,7 +42,7 @@
                         <span class="author">Admin, <?php echo $user['username'] ?> </span>
                     </div>
 
-                    <div class="accordion " id="accordionFlushExample">
+                    <div class="accordion" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -51,8 +51,8 @@
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                 <ul>
-                                    <li><a href="">Create product</a></li>
-                                    <li><a href="">List Product</a></li>
+                                    <li><a href="dashboard.php">Create product</a></li>
+                                    <li><a href="list-product.php">List Product</a></li>
                                 </ul>
                             </div>
                         </div>

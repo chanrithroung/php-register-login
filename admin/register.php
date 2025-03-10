@@ -1,8 +1,9 @@
 
 
 <?php 
-    require_once('utils.php');
-    require_once('db_connect.php');
+    require_once('../utils/db_connect.php');
+    require_once('../utils/utils.php');
+
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 

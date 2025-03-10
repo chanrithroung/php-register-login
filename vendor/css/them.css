@@ -105,3 +105,25 @@ ul > li {
 ul > li > a {
     text-decoration: none;
 }
+
+
+.primary-price {
+    background-color: rgba(30, 143, 255, 0.128);
+    color: dodgerblue !important;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.secondary-price {
+    background-color: rgba(0, 191, 255, 0.127);
+    color: deepskyblue;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.mark-date {
+    background-color: rgba(255, 0, 0, 0.069);
+    color: red;
+    padding: 8px 10px;
+    border-radius: 8px;
+}

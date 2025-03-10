@@ -1,6 +1,6 @@
 <?php 
-include('layout.php');
-include('function.php');
+require_once('layout.php');
+require_once('function.php');
 ?>
       <div class="col" >
         <div class="container p-5 shadow" style="height: 100vh">

@@ -23,8 +23,8 @@
             </div>    
 
             <div class="mt-5">
-                <a class="btn btn-lg btn-success me-4" href="login.php">Regsiter</a>
-                <a class="btn btn-lg btn-primary" href="register.php">Login</a>
+                <a class="btn btn-lg btn-success me-4" href="register.php">Regsiter</a>
+                <a class="btn btn-lg btn-primary" href="login.php">Login</a>
             </div>
         
        </body>

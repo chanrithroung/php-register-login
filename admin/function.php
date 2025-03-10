@@ -24,6 +24,45 @@
     }
 
 
+    function listProduct() {
+        $user_id = $_SESSION['user_id'];
+        $select_post = "SELECT * FROM `products` WHERE `author_id` = '$user_id';";
+        $result = db_connnet()->query($select_post);
+
+        while($row = mysqli_fetch_assoc($result)) {
+            $code = $row['code'];
+            $name = $row['name'];
+            $regular_price = $row['regular_price'];
+            $sale_price = $row['sale_price'];
+            $quantity = $row['quantity'];
+            $created_at = $row['created_at'];
+            $thumbnail = $row['thumbnail'] === 'DEFAULT' ? 'DEFAULT.png' : $row['thumbnail'];
+            echo '
+                 <tr class="align-middle">
+                        <td>'.$code.'</td>
+                        <td>'.$name.'</td>
+                        <td>
+                            <span class="primary-price">'.$regular_price.'$</span>
+                        </td>
+                        <td>
+                            <span class="secondary-price">'.$sale_price.'$</span> 
+                        </td>
+                        <td>'.$quantity.'</td>
+                        <td>
+                            <img style="height: 90px; border-radius: 8px;" src="/uploads/'.$thumbnail.'" alt="Thumbnail">
+                        </td>
+                        <td>
+                            <span class="mark-date">'.$created_at.'</span>
+                        </td>
+                        <td>
+                            <button class="btn btn-success">EDIT</button>
+                            <button class="btn btn-danger">DELETE</button>
+                        </td>
+                    </tr>
+            ';
+        }
+    }
+
 
 
 ?>
